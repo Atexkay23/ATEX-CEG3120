@@ -10,3 +10,5 @@ References for basic Git and GitHub commands
 - [GitHub](#github)
 - [SSH](#ssh)
 - [Resources](#resources)
+
+git log
