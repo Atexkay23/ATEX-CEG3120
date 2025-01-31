@@ -16,5 +16,6 @@ Shows the status of the working directory and staging area.
 - **Usage**:
   ```bash
   git status
+  
 
 
