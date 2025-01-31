@@ -12,16 +12,74 @@ References for basic Git and GitHub commands
 - [Resources](#resources)
 ## Command  Line Git
 ### git status
-Shows the status of the working directory and staging area.
-- **Usage**:
-  ```bash
-  git status
-### git log
-Displays the commit history of the repository.
-- **Usage**:
- ```bash
-  git log
+- **Description**: Shows the status of the local repository, such as uncommitted changes, staged files, and untracked files.
+- **Usage**:  ```bash git status ```
 
-  
+### git log
+- **Description**: Displays the commit history.
+- **Usage**:  ```bash git log ```
+
+### git clone
+- **Description**: Clones a remote repository to your local machine.
+- **Usage**:  ```bash git clone https://github.com/username/repository.git ```
+
+### git add
+- **Description**: Stages files for commit.
+- **Usage**:  ```bash git add <file_name> ```
+- **Explanation**: This command stages a file (or files) to be included in the next commit. You can add specific files or use `git add .` to add all modified files.
+
+### git rm
+- **Description**: Removes files from the staging area and/or working directory.
+- **Usage**:  ```bash git rm <file_name> ```
+- **Explanation**: This removes a file from the staging area and working directory (i.e., deletes it). To **untrack** a file (keep it locally but not in the repository), use:  ```bash git rm --cached <file_name> ```
+
+### git commit
+- **Description**: Commits staged changes to the repository.
+- **Usage**:  ```bash git commit -m "Your commit message" ```
+- **Explanation**: This command commits all the changes staged by `git add` and includes a message describing the changes.
+
+### git push
+- **Description**: Pushes local commits to the remote repository.
+- **Usage**:  ```bash git push origin main ```
+
+### git fetch
+- **Description**: Fetches changes from the remote repository without merging them.
+- **Usage**:  ```bash git fetch origin ```
+- **Explanation**: This downloads changes from the remote repository, but it does not automatically merge them with your local branch. You can inspect the changes before deciding to merge.
+
+### git merge
+- **Description**: Merges changes from one branch into another.
+- **Usage**:  ```bash git merge <branch_name> ```
+- **Explanation**: Merges the changes from the specified branch into the current branch. For example, if you are on the `main` branch and want to merge changes from `feature-branch`, you would run `git merge feature-branch`.
+
+### git pull
+- **Description**: Fetches and merges changes from the remote repository into your local branch.
+- **Usage**:  ```bash git pull origin main ```
+
+### git branch
+- **Description**: Lists, creates, or deletes branches.
+- **Usage**:  ```bash git branch ```
+To create a new branch:  ```bash git branch <branch_name> ```
+
+### git tag
+- **Description**: Adds a tag to a specific commit.
+- **Usage**:  ```bash git tag <tag_name> ```
+- **Explanation**: Tags are often used to mark specific points in the history, such as releases.
+
+### git checkout
+- **Description**: Switches between branches or restores files.
+- **Usage**:  ```bash git checkout <branch_name> ```
+To switch to a specific branch, use `git checkout <branch_name>`. To restore a file, use:  ```bash git checkout -- <file_name> ```
+
+### git init
+- **Description**: Initializes a new Git repository.
+- **Usage**:  ```bash git init ```
+- **Explanation**: This command creates a new `.git` directory in your project folder, making it a Git repository.
+
+### git remote
+- **Description**: Manages remote repositories.
+- **Usage**:  To view remotes:  ```bash git remote -v ```
+To add a remote:  ```bash git remote add origin https://github.com/username/repository.git ```
+- **Explanation**: This command allows you to configure and interact with remote repositories. You can add, remove, or change the remotes associated with your local repository.
 
 
