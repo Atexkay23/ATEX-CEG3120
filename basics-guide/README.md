@@ -11,4 +11,8 @@ References for basic Git and GitHub commands
 - [SSH](#ssh)
 - [Resources](#resources)
 
-git log
+### git status
+Shows the status of the working directory and staging area.
+- **Usage**:
+  ```bash
+  git status
