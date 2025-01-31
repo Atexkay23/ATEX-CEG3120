@@ -1,3 +1,3 @@
-**Basics Guide**
-**References for basic Git and GitHub commands**
+#Basics Guide
+References for basic Git and GitHub commands
 
