@@ -8,3 +8,14 @@ References for basic Git and GitHub commands
 5. Demonstrations
 6. Resources
 
+# Table of Contents
+
+- [Basics Guide](#basics-guide)
+- [Command Line Git](#command-line-git)
+  - [git status](#git-status)
+  - [git log](#git-log)
+  - [git clone](#git-clone)
+- [Git Files & Folders](#git-files--folders)
+- [GitHub](#github)
+- [SSH](#ssh)
+- [Resources](#resources)
