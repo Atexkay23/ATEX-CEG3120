@@ -82,4 +82,25 @@ To switch to a specific branch, use `git checkout <branch_name>`. To restore a f
 To add a remote:  ```bash git remote add origin https://github.com/username/repository.git ```
 - **Explanation**: This command allows you to configure and interact with remote repositories. You can add, remove, or change the remotes associated with your local repository.
 
+## Git Files & Folders
+
+### .git folder
+- **Description**: The `.git` folder is created in the root directory of every Git repository. This folder contains all the configuration files, information about the repository’s history, branches, remotes, and much more. It is a hidden folder and should not be manually edited. It stores the complete history and metadata for the repository.
+- **Purpose**: The `.git` folder is what turns a project folder into a Git repository. If you delete this folder, you lose all the versioning and history for the project.
+
+### .gitignore file
+- **Description**: The `.gitignore` file tells Git which files or directories to ignore in a project. This can be used to prevent certain files (such as build files, configuration files, or log files) from being tracked by Git.
+- **Usage**: You simply add the file paths or patterns to the `.gitignore` file, and Git will exclude those from version control.
+- **Example**:
+  ```bash
+  # Ignore all .log files
+  *.log
+
+  # Ignore node_modules folder
+  node_modules/
+
+  # Ignore all files in the tmp directory
+  tmp/*
+
+
 
