@@ -10,7 +10,7 @@ References for basic Git and GitHub commands
 - [GitHub](#github)
 - [SSH](#ssh)
 - [Resources](#resources)
-
+## Git Commands
 ### git status
 Shows the status of the working directory and staging area.
 - **Usage**:
