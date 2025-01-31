@@ -16,6 +16,12 @@ Shows the status of the working directory and staging area.
 - **Usage**:
   ```bash
   git status
+### git log
+Displays the commit history of the repository.
+- **Usage**:
+ ```bash
+  git log
+
   
 
 
