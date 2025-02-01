@@ -102,7 +102,7 @@ To add a remote:  ```bash git remote add origin https://github.com/username/repo
   # Ignore all files in the tmp directory
   tmp/*
 
-
+#!/bin/bash
 
 # GitHub Pull Request Process
 
