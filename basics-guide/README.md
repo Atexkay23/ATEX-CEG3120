@@ -104,3 +104,36 @@ To add a remote:  ```bash git remote add origin https://github.com/username/repo
 
 
 
+# GitHub Pull Request Process
+
+# Step 1: Fork or clone the repository (replace <repo-url> with the URL of the repo)
+echo "Cloning repository..."
+git clone <repo-url>
+cd <repo-name> # Change to your repo folder
+
+# Step 2: Create a new branch
+echo "Creating a new branch..."
+git checkout -b <new-branch-name>
+
+# Step 3: Make changes (this part is manual - edit files as needed)
+
+# Step 4: Add the changes to the staging area
+echo "Adding changes..."
+git add .
+
+# Step 5: Commit the changes
+echo "Committing changes..."
+git commit -m "Description of changes"
+
+# Step 6: Push changes to the remote repository
+echo "Pushing changes to remote repository..."
+git push origin <new-branch-name>
+
+# Step 7: Open the repository on GitHub and create a Pull Request
+# You can't fully automate this process without the GitHub API, so this step will open GitHub in the browser
+echo "Opening GitHub repository in browser to create Pull Request..."
+open "https://github.com/<username>/<repo-name>/pulls" # Open the PR page in the browser
+
+# Additional Note:
+# After creating the PR, you need to get it reviewed and merged into the main branch.
+# This can be demonstrated by having comments and the PR merged.
