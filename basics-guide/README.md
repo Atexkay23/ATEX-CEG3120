@@ -135,9 +135,6 @@ echo "Opening GitHub repository in browser to create Pull Request..."
 open "https://github.com/<username>/<repo-name>/pulls" # Open the PR page in the browser
 
 ## SSH
-
-## SSH
-
 ### SSH Authentication to Repositories
 **Description**: Using SSH for authentication with GitHub (or any other Git server) allows you to clone and push changes to repositories without having to enter your username and password each time.
 
