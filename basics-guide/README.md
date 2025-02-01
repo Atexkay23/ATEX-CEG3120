@@ -146,5 +146,34 @@ open "https://github.com/<username>/<repo-name>/pulls" # Open the PR page in the
    ```bash
    git clone git@github.com:username/repository.git
 
+### SSH Authentication to an AWS Instance
+**Description**: SSH can also be used to access remote servers like AWS instances. You authenticate using a private key that corresponds to a public key stored on the server.
+
+**How to use:**
+```bash
+ssh -i /path/to/your-private-key.pem ec2-user@your-ec2-public-ip
+
+
+### Using the Config File in the `.ssh` Folder
+**Description**: The SSH config file allows you to save different SSH configurations for various servers or repositories, making it easier to connect without having to specify all the details each time.
+
+**Example:**
+```bash
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+
+## Resources
+
+- [Pro Git Book](https://git-scm.com/book/en/v2)
+- [GitHub Documentation](https://docs.github.com/en/github)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Git Documentation](https://git-scm.com/doc)
+- **ChatGPT**
+- [GitHub Learning Lab](https://lab.github.com/)
+
+
+
 
 
