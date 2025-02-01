@@ -115,7 +115,7 @@ cd <repo-name> # Change to your repo folder
 echo "Creating a new branch..."
 git checkout -b <new-branch-name>
 
-### Step 3: Make changes (this part is manual - edit files as needed)
+### Step 3: Make changes ( manual - edit files as needed)
 
 ### Step 4: Add the changes to the staging area
 echo "Adding changes..."
