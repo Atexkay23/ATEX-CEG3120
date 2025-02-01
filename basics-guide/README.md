@@ -102,7 +102,7 @@ To add a remote:  ```bash git remote add origin https://github.com/username/repo
   # Ignore all files in the tmp directory
   tmp/*
 
-#!/bin/bash
+
 
 ## GitHub Pull Request Process
 
@@ -130,8 +130,21 @@ echo "Pushing changes to remote repository..."
 git push origin <new-branch-name>
 
 ### Step 7: Open the repository on GitHub and create a Pull Request
-### You can't fully automate this process without the GitHub API, so this step will open GitHub in the browser
+
 echo "Opening GitHub repository in browser to create Pull Request..."
 open "https://github.com/<username>/<repo-name>/pulls" # Open the PR page in the browser
+
+## SSH
+
+### SSH Authentication to Repositories
+**Description**: Using SSH for authentication with GitHub (or any other Git server) allows you to clone and push changes to repositories without having to enter your username and password each time.
+
+**How to set up SSH:**
+1. **Generate an SSH key** on your machine using `ssh-keygen`.
+2. **Add your public key** to GitHub (found in your GitHub account settings under SSH and GPG keys).
+3. **Clone repositories** using the SSH URL:  
+   ```bash
+   git clone git@github.com:username/repository.git
+
 
 
