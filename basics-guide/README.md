@@ -164,7 +164,7 @@ open "https://github.com/<username>/<repo-name>/pulls" # Open the PR page in the
 - [GitHub Documentation](https://docs.github.com/en/github)
 - [Stack Overflow](https://stackoverflow.com/)
 - [Git Documentation](https://git-scm.com/doc)
-- **ChatGPT**
+- **ChatGPT** (Mostly for organizing and syntax in markdown)
 - [GitHub Learning Lab](https://lab.github.com/)
 
 
