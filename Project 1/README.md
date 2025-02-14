@@ -4,7 +4,6 @@ A VPC is a logically isolated section of the AWS cloud where you can launch AWS 
 
 **Screenshot:**  
 ![VPC Configuration]("C:\Users\jaspe\OneDrive\Pictures\Screenshots\Screenshot 2025-02-14 174053-VPC.png")  
-*Replace `path/to/vpc-screenshot.png` with the actual path to your screenshot.*
 
 ---
 
