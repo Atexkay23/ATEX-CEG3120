@@ -6,7 +6,7 @@ A VPC (Virtual Private Cloud) is a logically isolated section of the AWS cloud w
 
 **Screenshot:**  
 ![VPC Configuration](path/to/vpc-screenshot.png)  
-*Replace `path/to/vpc-screenshot.png` with the actual path to your screenshot.*
+
 
 ---
 
@@ -20,7 +20,7 @@ A subnet is a range of IP addresses within a VPC where you can place groups of i
 
 **Screenshot:**  
 ![Subnet Configuration](path/to/subnet-screenshot.png)  
-*Replace `path/to/subnet-screenshot.png` with the actual path to your screenshot.*
+
 
 ---
 
@@ -30,7 +30,7 @@ An Internet Gateway (IGW) is a horizontally scaled, redundant, and highly availa
 
 **Screenshot:**  
 ![Internet Gateway Configuration](path/to/igw-screenshot.png)  
-*Replace `path/to/igw-screenshot.png` with the actual path to your screenshot.*
+
 
 ---
 
@@ -40,7 +40,7 @@ A route table contains a set of rules (routes) that determine where network traf
 
 **Screenshot:**  
 ![Route Table Configuration](path/to/route-table-screenshot.png)  
-*Replace `path/to/route-table-screenshot.png` with the actual path to your screenshot.*
+
 
 ---
 
@@ -50,7 +50,7 @@ A security group acts as a virtual firewall for your EC2 instances to control in
 
 **Screenshot:**  
 ![Security Group Configuration](path/to/security-group-screenshot.png)  
-*Replace `path/to/security-group-screenshot.png` with the actual path to your screenshot.*
+
 
 ---
 
@@ -60,7 +60,7 @@ A Network ACL (NACL) is a stateless firewall that controls traffic at the subnet
 
 **Screenshot:**  
 ![Network ACL Configuration](path/to/nacl-screenshot.png)  
-*Replace `path/to/nacl-screenshot.png` with the actual path to your screenshot.*
+
 
 ---
 
@@ -74,7 +74,7 @@ A key pair consists of a public key (stored by AWS) and a private key (downloade
 
 **Screenshot:**  
 ![Key Pair Configuration](path/to/key-pair-screenshot.png)  
-*Replace `path/to/key-pair-screenshot.png` with the actual path to your screenshot.*
+
 
 ---
 
@@ -88,4 +88,4 @@ An Elastic IP (EIP) is a static, public IPv4 address that you can allocate to yo
 
 **Screenshot:**  
 ![Elastic IP Configuration](path/to/elastic-ip-screenshot.png)  
-*Replace `path/to/elastic-ip-screenshot.png` with the actual path to your screenshot.*
+
