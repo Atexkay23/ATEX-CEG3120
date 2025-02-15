@@ -159,4 +159,4 @@ A key pair is required to securely connect to your EC2 instance via SSH. It cons
 ---
 
 ### Screenshot
-![EC2 Instance Details](project/ScreenShots/LaunchInstance.png)
+![EC2 Instance Details](Project/ScreenShots/LaunchInstance.png)
