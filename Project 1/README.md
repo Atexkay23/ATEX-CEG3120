@@ -160,3 +160,41 @@ A key pair is required to securely connect to your EC2 instance via SSH. It cons
 
 ### Screenshot
 ![EC2 Instance Details](Project/ScreenShots/LaunchInstance.png)
+
+---
+
+# Part 3 - Instance Configuration
+
+This section will guide you through configuring your EC2 instance, changing the hostname, and testing network configurations such as Security Groups and Network ACLs.
+
+---
+
+## 1. Steps Performed to SSH to Instance
+
+### Steps:
+1. **Obtain Your Instance’s Public IP or Elastic IP**:
+   - In the EC2 Console, navigate to the **Instances** section and locate your instance.
+   - Copy the **Public IP** or **Elastic IP** associated with the instance.
+
+2. **SSH Access**:
+   - Open a terminal 
+   - Example key to SSH into your instance:
+     ```bash
+     ssh -i /path/to/your-key.pem ec2-user@your-ec2-public-ip
+     ```
+
+---
+
+## 2. Steps Performed to Change Hostname of Instance
+
+### Steps:
+1. **Backup Configuration Files**:
+   Before modifying configuration files, back them up. Copy the `/etc/hostname` file to a backup location:
+   ```bash
+   sudo cp /etc/hostname /etc/hostname.old
+
+   **Screenshot:**  
+![SSH Configuration](Project/ScreenShots/SSH.png)
+
+   
+
