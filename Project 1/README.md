@@ -89,3 +89,74 @@ An Elastic IP (EIP) is a static, public IPv4 address that you can allocate to yo
 **Screenshot:**  
 ![Elastic IP Configuration](Project/ScreenShots/ElasticIP.png)  
 
+
+---
+
+## Part 2 - EC2 Instance Creation
+
+### What is an EC2 Instance?
+An EC2 (Elastic Compute Cloud) instance is a virtual server in AWS that allows you to run applications and workloads in the cloud. It provides scalable computing capacity and can be configured with various operating systems, instance types, and storage options.
+
+---
+
+### How-to Launch an Instance
+
+#### Step 1: Choose an AMI
+1. Go to the **EC2 Dashboard** in the AWS Management Console.
+2. Click **Launch Instance**.
+3. Select an AMI (Amazon Machine Image). For example:
+   - **AMI ID:** `ami-0abcdef1234567890` (replace with the actual AMI ID).
+   - **OS:** Amazon Linux 2 (or your chosen OS).
+   - **Version:** Latest.
+
+#### Step 2: Choose an Instance Type
+1. Select an instance type (e.g., `t2.micro` for free tier eligibility).
+
+#### Step 3: Configure Instance Details
+1. **Network:** Select your VPC (`YOURLASTNAME-VPC`).
+2. **Subnet:** Select your subnet (`YOURLASTNAME-Subnet`).
+3. **Auto-assign Public IP:** Enable.
+
+#### Step 4: Add Storage
+1. Leave the default storage settings (or adjust as needed).
+
+#### Step 5: Add Tags
+1. Add a tag with:
+   - **Key:** `Name`
+   - **Value:** `YOURLASTNAME-instance`.
+
+#### Step 6: Configure Security Group
+1. Select the security group you created earlier (`YOURLASTNAME-sg`).
+
+#### Step 7: Review and Launch
+1. Review your settings and click **Launch**.
+2. When prompted, select your key pair (`YOURLASTNAME-keypair`) and acknowledge that you have access to the private key.
+
+---
+
+### Instance Details
+- **AMI Selected:**
+  - **AMI ID:** `ami-0abcdef1234567890` (replace with the actual AMI ID).
+  - **OS:** Amazon Linux 2 (or your chosen OS).
+  - **Version:** Latest.
+- **Default Username:** `ec2-user` (for Amazon Linux) or the appropriate username for your chosen OS.
+- **Instance Type:** `t2.micro` (or your selected instance type).
+- **Key Pair:** `YOURLASTNAME-keypair`.
+
+---
+
+### Why Select a Key Pair?
+A key pair is required to securely connect to your EC2 instance via SSH. It consists of a public key (stored by AWS) and a private key (downloaded by you). The private key is used to authenticate your SSH connection, ensuring secure access to the instance. Without a key pair, you cannot securely access your instance.
+
+---
+
+### How-to Associate the Elastic IP (EIP)
+1. Go to the **Elastic IPs** section in the EC2 Dashboard.
+2. Select the Elastic IP you allocated earlier (`YOURLASTNAME-EIP`).
+3. Click **Actions > Associate Elastic IP address**.
+4. Select your instance (`YOURLASTNAME-instance`) and click **Associate**.
+
+---
+
+### Screenshot
+![EC2 Instance Details](project/screenshots/ec2-instance-details.png)
