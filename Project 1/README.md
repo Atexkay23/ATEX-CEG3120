@@ -192,6 +192,7 @@ This section will guide you through configuring your EC2 instance, changing the 
    Before modifying configuration files, back them up. Copy the `/etc/hostname` file to a backup location:
    ```bash
    sudo cp /etc/hostname /etc/hostname.old
+   ```
 
    **Screenshot:**  
 ![SSH Configuration](Project/ScreenShots/SSH.png)
