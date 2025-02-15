@@ -104,9 +104,9 @@ An EC2 (Elastic Compute Cloud) instance is a virtual server in AWS that allows y
 #### Step 1: Choose an AMI
 1. Go to the **EC2 Dashboard** in the AWS Management Console.
 2. Click **Launch Instance**.
-3. Select an AMI (Amazon Machine Image). For example:
-   - **AMI ID:** `ami-0abcdef1234567890` (replace with the actual AMI ID).
-   - **OS:** Amazon Linux 2 (or your chosen OS).
+3. Select an AMI. For example:
+   - **AMI ID:** `ami-04b4f1a9cf54c11d0`.
+   - **OS:** Linux.
    - **Version:** Latest.
 
 #### Step 2: Choose an Instance Type
