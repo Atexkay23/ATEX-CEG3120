@@ -59,7 +59,7 @@ A security group acts as a virtual firewall for your EC2 instances to control in
 A Network ACL (NACL) is a stateless firewall that controls traffic at the subnet level. It supports both allow and deny rules and evaluates rules in order when deciding whether to allow traffic. Unlike security groups, NACLs are stateless, meaning return traffic must be explicitly allowed.
 
 **Screenshot:**  
-![Network ACL Configuration](Project/ScreenShots/NetworkACL/.png)  
+![Network ACL Configuration](Project/ScreenShots/NetworkACL.png)  
 
 
 ---
@@ -87,5 +87,5 @@ An Elastic IP (EIP) is a static, public IPv4 address that you can allocate to yo
 - **Public IP:** Automatically assigned to an instance when launched but changes if the instance is stopped and restarted.
 
 **Screenshot:**  
-![Elastic IP Configuration](Project/ScreenShots/ElasticIP/.png)  
+![Elastic IP Configuration](Project/ScreenShots/ElasticIP.png)  
 
