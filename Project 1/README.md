@@ -137,8 +137,8 @@ An EC2 (Elastic Compute Cloud) instance is a virtual server in AWS that allows y
 ### Instance Details
 - **AMI Selected:**
   - **AMI ID:** `ami-04b4f1a9cf54c11d0`
-  - **OS:** Ubuntu.
-  - **Version:** Latest.
+  - **OS:** `Ubuntu`.
+  - **Version:** `Latest`.
 - **Default Username:** `Linux` 
 - **Instance Type:** `t2.micro`
 - **Key Pair:** `Melson-keypair`.
@@ -159,4 +159,4 @@ A key pair is required to securely connect to your EC2 instance via SSH. It cons
 ---
 
 ### Screenshot
-![EC2 Instance Details](project/.png)
+![EC2 Instance Details](project/ScreenShots/LaunchInstance.png)
