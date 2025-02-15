@@ -104,17 +104,17 @@ An EC2 (Elastic Compute Cloud) instance is a virtual server in AWS that allows y
 #### Step 1: Choose an AMI
 1. Go to the **EC2 Dashboard** in the AWS Management Console.
 2. Click **Launch Instance**.
-3. Select an AMI. For example:
-   - **AMI ID:** `ami-04b4f1a9cf54c11d0`.
-   - **OS:** Linux.
-   - **Version:** Latest.
+3. Select an AMI.
+   - **AMI ID:** Select your AMI ID.
+   - **OS:** Select OS.
+   - **Version:** What version is used.
 
 #### Step 2: Choose an Instance Type
-1. Select an instance type (e.g., `t2.micro` for free tier eligibility).
+1. Select an instance type (I selected t2.micro)
 
 #### Step 3: Configure Instance Details
-1. **Network:** Select your VPC (`YOURLASTNAME-VPC`).
-2. **Subnet:** Select your subnet (`YOURLASTNAME-Subnet`).
+1. **Network:** Select your VPC (`Melson-VPC`).
+2. **Subnet:** Select your subnet (`Melson-Subnet`).
 3. **Auto-assign Public IP:** Enable.
 
 #### Step 4: Add Storage
@@ -123,25 +123,25 @@ An EC2 (Elastic Compute Cloud) instance is a virtual server in AWS that allows y
 #### Step 5: Add Tags
 1. Add a tag with:
    - **Key:** `Name`
-   - **Value:** `YOURLASTNAME-instance`.
+   - **Value:** `Melson-instance`.
 
 #### Step 6: Configure Security Group
-1. Select the security group you created earlier (`YOURLASTNAME-sg`).
+1. Select the security group (`Melson-sg`).
 
 #### Step 7: Review and Launch
 1. Review your settings and click **Launch**.
-2. When prompted, select your key pair (`YOURLASTNAME-keypair`) and acknowledge that you have access to the private key.
+2. When prompted, select your key pair (`Melson-keypair`) and acknowledge that you have access to the private key.
 
 ---
 
 ### Instance Details
 - **AMI Selected:**
-  - **AMI ID:** `ami-0abcdef1234567890` (replace with the actual AMI ID).
-  - **OS:** Amazon Linux 2 (or your chosen OS).
+  - **AMI ID:** `ami-04b4f1a9cf54c11d0`
+  - **OS:** Ubuntu.
   - **Version:** Latest.
-- **Default Username:** `ec2-user` (for Amazon Linux) or the appropriate username for your chosen OS.
-- **Instance Type:** `t2.micro` (or your selected instance type).
-- **Key Pair:** `YOURLASTNAME-keypair`.
+- **Default Username:** `Linux` 
+- **Instance Type:** `t2.micro`
+- **Key Pair:** `Melson-keypair`.
 
 ---
 
@@ -152,11 +152,11 @@ A key pair is required to securely connect to your EC2 instance via SSH. It cons
 
 ### How-to Associate the Elastic IP (EIP)
 1. Go to the **Elastic IPs** section in the EC2 Dashboard.
-2. Select the Elastic IP you allocated earlier (`YOURLASTNAME-EIP`).
+2. Select the Elastic IP you allocated earlier (`Melson-ElasticIP`).
 3. Click **Actions > Associate Elastic IP address**.
-4. Select your instance (`YOURLASTNAME-instance`) and click **Associate**.
+4. Select your instance (`Melson-instance`) and click **Associate**.
 
 ---
 
 ### Screenshot
-![EC2 Instance Details](project/screenshots/ec2-instance-details.png)
+![EC2 Instance Details](project/.png)
