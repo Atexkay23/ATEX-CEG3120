@@ -19,7 +19,7 @@ A subnet is a range of IP addresses within a VPC where you can place groups of i
 - **Remaining block(s) in the VPC:** `172.18.1.0/24` (since the VPC CIDR is `172.18.0.0/23`).
 
 **Screenshot:**  
-![Subnet Configuration](path/to/subnet-screenshot.png)  
+![Subnet Configuration](Project/ScreenShots/Subnet.png)  
 
 
 ---
@@ -29,7 +29,7 @@ A subnet is a range of IP addresses within a VPC where you can place groups of i
 An Internet Gateway (IGW) is a horizontally scaled, redundant, and highly available VPC component that allows communication between resources in your VPC and the internet. It provides a target in your VPC route tables for internet-routable traffic.
 
 **Screenshot:**  
-![Internet Gateway Configuration](path/to/igw-screenshot.png)  
+![Internet Gateway Configuration](Project/GateWay.png)  
 
 
 ---
@@ -39,7 +39,7 @@ An Internet Gateway (IGW) is a horizontally scaled, redundant, and highly availa
 A route table contains a set of rules (routes) that determine where network traffic from your subnet is directed. Each subnet in your VPC must be associated with a route table, which controls the traffic flow to and from the subnet.
 
 **Screenshot:**  
-![Route Table Configuration](path/to/route-table-screenshot.png)  
+![Route Table Configuration](Project/RouteTable.png)  
 
 
 ---
@@ -49,7 +49,7 @@ A route table contains a set of rules (routes) that determine where network traf
 A security group acts as a virtual firewall for your EC2 instances to control inbound and outbound traffic. It operates at the instance level and supports allow rules only. Security groups are stateful, meaning that return traffic is automatically allowed regardless of the rules.
 
 **Screenshot:**  
-![Security Group Configuration](path/to/security-group-screenshot.png)  
+![Security Group Configuration](Project/SecurityGroup.png)  
 
 
 ---
@@ -59,7 +59,7 @@ A security group acts as a virtual firewall for your EC2 instances to control in
 A Network ACL (NACL) is a stateless firewall that controls traffic at the subnet level. It supports both allow and deny rules and evaluates rules in order when deciding whether to allow traffic. Unlike security groups, NACLs are stateless, meaning return traffic must be explicitly allowed.
 
 **Screenshot:**  
-![Network ACL Configuration](path/to/nacl-screenshot.png)  
+![Network ACL Configuration](Project/NetworkACL/.png)  
 
 
 ---
@@ -73,7 +73,7 @@ A key pair consists of a public key (stored by AWS) and a private key (downloade
 - **Private key:** Downloaded by you during key pair creation. AWS does not store the private key.
 
 **Screenshot:**  
-![Key Pair Configuration](path/to/key-pair-screenshot.png)  
+![Key Pair Configuration](Project/KeyPair.png)  
 
 
 ---
@@ -87,5 +87,5 @@ An Elastic IP (EIP) is a static, public IPv4 address that you can allocate to yo
 - **Public IP:** Automatically assigned to an instance when launched but changes if the instance is stopped and restarted.
 
 **Screenshot:**  
-![Elastic IP Configuration](path/to/elastic-ip-screenshot.png)  
+![Elastic IP Configuration](Project/ElasticIP/.png)  
 
