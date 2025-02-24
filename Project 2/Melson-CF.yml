@@ -16,24 +16,23 @@ Parameters:
     ConstraintDescription: must be a valid IP CIDR range of the form x.x.x.x/x.
 Mappings:
   AWSRegionAMI: # AMI for Ubuntu server in each supported region 
-    us-east-1:   # N. Virginia
-    # AMI ID for Ubuntu 20 (ubuntu + apt) - Amazon Linux 2 AMI ami-02e136e904f3da870 (ec2-user + yum)
-      HVM64: ami-09e67e426f25ce0d7 # TODO use AMI ID of choice
+    us-east-2: #Ohio  
+      HVM64: ami-00402f0bdf4996822 
 Resources:
   VPC:
     Type: 'AWS::EC2::VPC'
     Properties:
-      CidrBlock: 10.0.0.0/16
+      CidrBlock: 172.18.0.0/23
       Tags:
         - Key: Application
-          Value: !Ref 'AWS::StackId'
+          Value: 'AWS::StackId'
         - Key: Name
-          Value: CEGXXXX VPC
+          Value: Melson VPC
   Subnet:
     Type: 'AWS::EC2::Subnet'
     Properties:
       VpcId: !Ref VPC
-      CidrBlock: 10.0.0.0/24
+      CidrBlock: 172.18.0.0/24
       Tags:
         - Key: Application
           Value: !Ref 'AWS::StackId'
