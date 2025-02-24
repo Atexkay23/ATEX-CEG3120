@@ -1,13 +1,12 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
   Testing area for AWS:This CloudFormation template provisions the necessary AWS resources, including a VPC, subnet, security group, and an EC2 instance for testing and development purposes.
-
 Parameters:
   KeyName:vockey
     Description: The EC2 KeyPair name to authenticate and allow SSH access to the EC2 instance.
     Type: rsa
     ConstraintDescription: Have to be the name of an existing EC2 KeyPair in my AWS account.
-  SSHLocation:
+  SSHLocation: 130.108.104.16
     Description: ' The IP address range that can be used to access the EC2 instance'
     Type: String
     MinLength: '9' # 1.1.1.1/0
