@@ -64,24 +64,24 @@ Resources:
   SubnetRouteTableAssociation:
     Type: 'AWS::EC2::SubnetRouteTableAssociation'
     Properties:
-      SubnetId: !Ref Subnet
-      RouteTableId: !Ref RouteTable
+      SubnetId: subnet-0a76a4a0fd7985a9b
+      RouteTableId: rtb-027afdfb426917e1c
   UbuntuIPAddress:
     Type: 'AWS::EC2::EIP'
     DependsOn: AttachGateway
     Properties:
       Domain: vpc
-      InstanceId: !Ref PublicUbuntuInstance
+      InstanceId: i-01c03dfe3b672ec45
   SecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
-      VpcId: !Ref VPC
+      VpcId: vpc-05bfad42453eea9dd  
       GroupDescription: Enable SSH access via port 22 and open all insternal ports.
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: !Ref SSHLocation
+          CidrIp: 130.108.104.16/32
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
