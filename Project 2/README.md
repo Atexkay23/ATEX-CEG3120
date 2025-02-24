@@ -1,6 +1,6 @@
 # Project Description
 
-This project creates a basic testing setup in AWS using CloudFormation. It sets up a network (VPC), an EC2 instance (virtual server), security rules, and other resources.
+This project creates a basic testing setup in AWS using CloudFormation. It sets up a VPC network, an EC2 instance, security rules, and other resources.
 
 ### What it does:
 - Sets up AWS resources automatically
