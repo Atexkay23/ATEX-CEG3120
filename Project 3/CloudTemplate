@@ -1,1 +1,115 @@
 
+## CloudFormation Template (`cloudformation-template.yaml`)
+
+```yaml
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation Template for Project 3 - Web Server with HAProxy Load Balancer
+
+Resources:
+  # VPC
+  VPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: '10.0.0.0/16'
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      Tags:
+        - Key: Name
+          Value: Project3VPC
+
+  # Subnet (Public)
+  PublicSubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: '10.0.1.0/24'
+      AvailabilityZone: !Select [ 0, !GetAZs '' ]
+      MapPublicIpOnLaunch: 'true'
+      Tags:
+        - Key: Name
+          Value: PublicSubnet
+
+  # Subnet (Private)
+  PrivateSubnet:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref VPC
+      CidrBlock: '10.0.2.0/24'
+      AvailabilityZone: !Select [ 0, !GetAZs '' ]
+      Tags:
+        - Key: Name
+          Value: PrivateSubnet
+
+  # Internet Gateway
+  IGW:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: Project3-IGW
+
+  # Attach Internet Gateway to VPC
+  AttachIGW:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref VPC
+      InternetGatewayId: !Ref IGW
+
+  # EC2 Instance for Web Server
+  WebServerInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t2.micro
+      KeyName: your-key-name
+      ImageId: ami-0c55b159cbfafe1f0  # Replace with appropriate AMI ID
+      SubnetId: !Ref PublicSubnet
+      SecurityGroupIds:
+        - !Ref WebServerSG
+      Tags:
+        - Key: Name
+          Value: WebServer
+
+  # EC2 Instance for HAProxy
+  HAProxyInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t2.micro
+      KeyName: your-key-name
+      ImageId: ami-0c55b159cbfafe1f0  # Replace with appropriate AMI ID
+      SubnetId: !Ref PublicSubnet
+      SecurityGroupIds:
+        - !Ref HAProxySG
+      Tags:
+        - Key: Name
+          Value: HAProxy
+
+  # Web Server Security Group
+  WebServerSG:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Allow HTTP and SSH
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: '0.0.0.0/0'
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: '0.0.0.0/0'
+
+  # HAProxy Security Group
+  HAProxySG:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Allow HTTP and SSH
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '80'
+          ToPort: '80'
+          CidrIp: '0.0.0.0/0'
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: '0.0.0.0/0'
+
