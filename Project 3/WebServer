@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Update package list and install nginx (or apache2)
+sudo apt-get update -y
+sudo apt-get install -y nginx
+
+# Set up a simple web page for testing
+echo "<h1>Welcome to My Website</h1>" | sudo tee /var/www/html/index.html
+
+# Start and enable nginx to run at boot
+sudo systemctl start nginx
+sudo systemctl enable nginx
