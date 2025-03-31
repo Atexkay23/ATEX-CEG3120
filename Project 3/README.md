@@ -5,8 +5,8 @@ This project involves deploying a web application using **AWS CloudFormation**, 
 
 # Folder Structure:
 
+
 ## Prerequisites
-Before starting, ensure you have the following:
 - An **AWS account** with EC2 access.
 - **AWS CLI** installed and configured.
 - **CloudFormation permissions** in AWS IAM.
@@ -14,9 +14,17 @@ Before starting, ensure you have the following:
 - Basic knowledge of Linux commands and AWS networking.
 
 ## Deployment Steps
-
-### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/Atexkay23/ATEX-CEG3120/Project3
 cd Project3
 
+aws cloudformation create-stack --stack-name Project3Stack \
+    --template-body file://cloudformation-template.yaml \
+    --capabilities CAPABILITY_IAM
+
+chmod +x webserver-setup.sh
+./webserver-setup.sh
+
+ssh -i your-key.pem ubuntu@<WebServer-Public-IP>
+chmod +x haproxy-setup.sh
+./haproxy-setup.sh
