@@ -3,7 +3,7 @@
 ## Overview
 This project involves deploying a web application using **AWS CloudFormation**, setting up **nginx** or **apache2** as a web server, and configuring **HAProxy** as a load balancer. The project is hosted on **AWS EC2 instances** and uses a **CloudFormation template** for deployment automation.
 
-## Folder Structure
+# Folder Structure:
 
 ## Prerequisites
 Before starting, ensure you have the following:
@@ -17,6 +17,6 @@ Before starting, ensure you have the following:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/YourUsername/Project3.git
+git clone https://github.com/Atexkay23/ATEX-CEG3120/Project3
 cd Project3
 
