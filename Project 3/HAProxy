@@ -1,0 +1,7 @@
+#!/bin/bash
+# Install HAProxy
+sudo apt update
+sudo apt install -y haproxy
+# Optional: Configuration for HAProxy
+sudo systemctl enable haproxy
+sudo systemctl start haproxy
